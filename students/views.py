@@ -38,7 +38,7 @@ def update(request, student_id):
     return HttpResponseRedirect('/students/')
 
 
-def delete(student_id):
+def delete(request, student_id):
     student = get_object_or_404(Student, pk=student_id)
     student.delete()
     return HttpResponseRedirect('/students/')
