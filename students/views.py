@@ -7,8 +7,7 @@ from .models import Student
 def index(request):
     students = Student.objects.all()
     context = {'students': students}
-    return render(request, 'students/index.html',
-                  context)
+    return render(request, 'students/index.html', context)
 
 
 def add(request):
