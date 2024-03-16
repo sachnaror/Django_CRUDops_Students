@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Students</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
-    <p>This is another paragraph.</p>
+    <h1>List of Students</h1><hr>
+    <a href="{% url 'students:add' %}" style="float:right;">Add New Student</a>
+    <div style="clear:both;"></div><br>
+    <table style="width: 100%;">
+        <thead>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Age</td>
+            <td colspan="2">Actions</td>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{student.first_name}}</td>
+                <td>{{student.last_name}}</td>
+                <td>{{student.age}}</td>
+                <td><a href="{% url 'students:edit' student.id %}">edit</a></td>
+                <td><a href="{% url 'students:delete' student.id %}">delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
