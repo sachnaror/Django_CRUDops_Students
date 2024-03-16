@@ -127,11 +127,3 @@ Your introduction goes here.
 ### Skills
 
 List your skills here.
-
-### Links
-
-Include relevant links here.
-
-### Other
-
-Include any other relevant information about you here.
