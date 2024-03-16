@@ -3,7 +3,7 @@
 echo "# Django_CRUD" >> README.md
 git init
 git add README.md
-git commit -m "first commit"
+git commit -m "Success is not final, failure is not fatal: It is the courage to continue that counts."
 git branch -M master
 git remote add origin https://github.com/sachnaror/Django_CRUD_Students
 git push -u origin master
