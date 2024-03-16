@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
 </head>
 <body>
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
-    <p>This is another paragraph.</p>
+    <form method="POST" action="{% url 'students:insert' %}">
+        {% csrf_token %}
+        <div>
+            <label>First Name: </label>
+            <input type="text" name="first_name">
+        </div><br>
+        <div>
+            <label>Last Name: </label>
+            <input type="text" name="last_name">
+        </div><br>
+        <div>
+            <label>Age: </label>
+            <input type="number" name="age">
+        </div>
+        <input type="submit" name="submit" value="submit">
+    </form>
 </body>
 </html>
