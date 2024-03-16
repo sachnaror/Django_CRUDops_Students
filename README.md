@@ -48,6 +48,10 @@ This repository contains a Django project that demonstrates CRUD (Create, Read, 
 - Visit the homepage to view the list of students.
 - Use the navigation links to perform CRUD operations on student records.
 
+.
+<img width="683" alt="Screenshot 2024-03-16 at 11 50 32 PM" src="https://github.com/sachnaror/Django_CRUDops_Students/assets/9551754/3a0de019-4f13-4cf2-ab19-d7c00cadfe7e">
+
+
 ## Contributing
 
 Contributions are welcome! Please feel free to fork the repository and submit pull requests to contribute new features, improve existing code, or fix bugs.
